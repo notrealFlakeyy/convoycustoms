@@ -1,39 +1,39 @@
 import Link from "next/link";
 
-export default function Home() {
+export default function FinnishHomePage() {
   return (
     <main>
       <section className="page-section">
         <div className="container grid gap-8 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div className="space-y-5">
             <p className="inline-block rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1 text-sm font-semibold uppercase tracking-wide">
-              Industriell och kommersiell fabrikation
+              Teollinen ja kaupallinen metallin valmistus
             </p>
             <h1 className="text-4xl leading-tight md:text-6xl">
-              Precisionsfabrikation i metall byggd for verkliga arbetsmiljoer.
+              Tarkkaa metallin valmistusta vaativiin kayttokohteisiin.
             </h1>
             <p className="max-w-xl text-lg text-[#34413c]">
-              Convoy Customs levererar kundanpassad fabrikation i stal och
-              aluminium for tillverkare, fordonsflottor och byggteam. Fran
-              prototyp till produktion bygger vi komponenter som fungerar pa
-              plats och levereras i tid.
+              Convoy Customs toimittaa mittatilaustyona valmistettuja tera- ja
+              alumiinirakenteita valmistajille, kalusto-operaattoreille ja
+              rakennustiimeille. Prototyypeista sarjatuotantoon toteutamme osat,
+              jotka toimivat asennuspaikalla ja valmistuvat aikataulussa.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact" className="primary-button">
-                Begar offert
+              <Link href="/fi/contact" className="primary-button">
+                Pyyda tarjous
               </Link>
-              <Link href="/about" className="secondary-button">
-                Las om oss
+              <Link href="/fi/about" className="secondary-button">
+                Lue meista
               </Link>
             </div>
           </div>
           <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-xl shadow-[#212a2522]">
-            <h2 className="text-2xl">Karnkompetenser</h2>
+            <h2 className="text-2xl">Ydinpalvelut</h2>
             <ul className="mt-4 space-y-3 text-[#34413c]">
-              <li>Kundanpassade beslag, ramar och strukturella montage</li>
-              <li>CNC-skarning, bockning, svetsning och efterbehandling</li>
-              <li>Reparation, retrofit och korta produktionsserier</li>
-              <li>Installationsklart underlag och dokumentation</li>
+              <li>Mittatilauskiinnikkeet, rungot ja terasrakenteet</li>
+              <li>CNC-leikkaus, muovaus, hitsaus ja viimeistely</li>
+              <li>Korjaus, modernisointi ja pienet tuotantosarjat</li>
+              <li>Asennusvalmis dokumentaatio ja toimitustuki</li>
             </ul>
           </div>
         </div>
@@ -43,24 +43,24 @@ export default function Home() {
         <div className="container">
           <div className="card-grid">
             <article className="info-card">
-              <h3 className="text-xl">Snabb leverans</h3>
+              <h3 className="text-xl">Nopea toimitus</h3>
               <p className="mt-2 text-[#34413c]">
-                Tidskritiska projekt ar vardag for oss. Processen ar byggd for
-                tydliga offerter och tillforlitliga leveranstider.
+                Tiukat aikataulut ovat meille arkea. Prosessi on rakennettu
+                selkeille tarjouksille ja luotettaville toimitusajoille.
               </p>
             </article>
             <article className="info-card">
-              <h3 className="text-xl">Kvalitetssakring</h3>
+              <h3 className="text-xl">Laadunvarmistus</h3>
               <p className="mt-2 text-[#34413c]">
-                Varje detalj matas och dokumenteras innan leverans sa att ert
-                montage fungerar direkt pa plats.
+                Jokainen osa mitataan ja dokumentoidaan ennen toimitusta, jotta
+                asennus sujuu ilman viivastyksia.
               </p>
             </article>
             <article className="info-card">
-              <h3 className="text-xl">Byggt for industrin</h3>
+              <h3 className="text-xl">Teollisuudelle rakennettu</h3>
               <p className="mt-2 text-[#34413c]">
-                Vi tillverkar for logistik, energi och tung utrustning dar
-                robust funktion vager tyngre an kosmetik.
+                Valmistamme ratkaisuja logistiikkaan, energiaan ja raskaaseen
+                kalustoon, joissa toiminnallisuus on ensisijaista.
               </p>
             </article>
           </div>
@@ -71,32 +71,32 @@ export default function Home() {
         <div className="container grid gap-6 md:grid-cols-3">
           <article className="rounded-xl bg-[var(--surface)] p-5">
             <p className="text-sm uppercase tracking-wider text-[#3f4f48]">
-              Steg 1
+              Vaihe 1
             </p>
-            <h3 className="mt-1 text-xl">Genomgang av behov</h3>
+            <h3 className="mt-1 text-xl">Tarpeen kartoitus</h3>
             <p className="mt-2 text-[#34413c]">
-              Dela ritningar eller koncept. Vi granskar krav, toleranser och
-              materialval innan offert.
+              Toimita piirustukset tai konsepti. Arvioimme vaatimukset,
+              toleranssit ja materiaalit ennen tarjousta.
             </p>
           </article>
           <article className="rounded-xl bg-[var(--surface)] p-5">
             <p className="text-sm uppercase tracking-wider text-[#3f4f48]">
-              Steg 2
+              Vaihe 2
             </p>
-            <h3 className="mt-1 text-xl">Tillverkning</h3>
+            <h3 className="mt-1 text-xl">Valmistus</h3>
             <p className="mt-2 text-[#34413c]">
-              Produktionen drivs med tydliga milstolpar for skarning, svets,
-              efterbehandling och inspektion.
+              Tuotanto etenee selkeilla valivaiheilla: leikkaus, hitsaus,
+              viimeistely ja tarkastus.
             </p>
           </article>
           <article className="rounded-xl bg-[var(--surface)] p-5">
             <p className="text-sm uppercase tracking-wider text-[#3f4f48]">
-              Steg 3
+              Vaihe 3
             </p>
-            <h3 className="mt-1 text-xl">Leverans</h3>
+            <h3 className="mt-1 text-xl">Toimitus</h3>
             <p className="mt-2 text-[#34413c]">
-              Vi paketerar och markerar efter monteringsordning, vilket minskar
-              stopp i falt for ert team.
+              Pakkaamme ja merkitsemme osat asennusjarjestyksen mukaan, jotta
+              tyomaalla tulee mahdollisimman vahan viivetta.
             </p>
           </article>
         </div>
