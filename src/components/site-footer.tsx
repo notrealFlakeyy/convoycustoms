@@ -10,11 +10,10 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="container site-footer-inner">
         <p>
-          Convoy Customs{" "}
-          {isFinnish ? "Metallin valmistuspalvelut" : "Metallfabrikation"}
+          Convoy Customs
         </p>
-        <p>1024 Foundry Avenue, Columbus, OH 43215</p>
-        <p>(614) 555-0188 | info@convoycustoms.com</p>
+        <p>Vasavägen 837, 66710 Kaitsor</p>
+        <p> 0456625484 | info@convoycustoms.fi</p>
       </div>
     </footer>
   );
