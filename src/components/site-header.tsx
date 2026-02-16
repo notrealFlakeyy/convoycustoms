@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -24,7 +24,7 @@ export default function SiteHeader() {
           />
         </Link>
         <div className="header-right">
-          <nav className="main-nav" aria-label={isFinnish ? "Paavalikko" : "Primar"}>
+          <nav className="main-nav" aria-label={isFinnish ? "Päävalikko" : "Primar"}>
             <Link href={isFinnish ? "/fi" : "/"}>{isFinnish ? "Koti" : "Hem"}</Link>
             <Link href={isFinnish ? "/fi/about" : "/about"}>
               {isFinnish ? "Projektit" : "Projekt"}

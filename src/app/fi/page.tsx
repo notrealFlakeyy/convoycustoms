@@ -1,4 +1,6 @@
+﻿import Image from "next/image";
 import Link from "next/link";
+import { siteAssets } from "@/lib/site-assets";
 
 export default function FinnishHomePage() {
   return (
@@ -6,35 +8,51 @@ export default function FinnishHomePage() {
       <section className="page-section">
         <div className="container grid gap-8 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div className="space-y-5">
-            <p className="inline-block rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1 text-sm font-semibold uppercase tracking-wide">
-              Teollinen ja kaupallinen metallin valmistus
-            </p>
             <h1 className="text-4xl leading-tight md:text-6xl">
-              Tarkkaa metallin valmistusta vaativiin kayttokohteisiin.
+              Räätälöidyt ratkaisut ajoneuvoosi
             </h1>
             <p className="max-w-xl text-lg text-[#34413c]">
-              Convoy Customs toimittaa mittatilaustyona valmistettuja tera- ja
-              alumiinirakenteita valmistajille, kalusto-operaattoreille ja
-              rakennustiimeille. Prototyypeista sarjatuotantoon toteutamme osat,
-              jotka toimivat asennuspaikalla ja valmistuvat aikataulussa.
+              Convoy Customs on vastaperustettu yritys, jolla on usean vuoden kokemus
+              mittatilauskaarien, lisävarusteiden ja lisätarvikkeiden
+              valmistuksesta autoihin, kuorma-autoihin ja työkoneisiin.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/fi/contact" className="primary-button">
-                Pyyda tarjous
+                Pyydä tarjous
               </Link>
               <Link href="/fi/about" className="secondary-button">
-                Lue meista
+                Aiemmat projektit
               </Link>
             </div>
           </div>
           <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-xl shadow-[#212a2522]">
-            <h2 className="text-2xl">Ydinpalvelut</h2>
-            <ul className="mt-4 space-y-3 text-[#34413c]">
-              <li>Mittatilauskiinnikkeet, rungot ja terasrakenteet</li>
-              <li>CNC-leikkaus, muovaus, hitsaus ja viimeistely</li>
-              <li>Korjaus, modernisointi ja pienet tuotantosarjat</li>
-              <li>Asennusvalmis dokumentaatio ja toimitustuki</li>
-            </ul>
+            <h2 className="text-2xl">Bob-systems</h2>
+            <p className="mt-4 text-[#34413c]">
+              Bob-systemsin valtuutettuna jälleenmyyjänä huolehdimme myös
+              huoltoautosi sisustuksesta. Asennamme ammattitason kalustukset,
+              jotka maksimoivat työtilan ja pitävät tavarat järjestyksessä.
+              Suunnittele oma ratkaisusi ja pyydä tarjous logon kautta{" "}
+              <span aria-hidden="true" className="inline-block text-sm">
+                ↓
+              </span>
+            </p>
+            <div className="mt-4">
+              <Link
+                href="https://bobsystem.se/?reseller=13024"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Siirry Bob-systemsin sivulle"
+                className="inline-flex"
+              >
+                <Image
+                  src={siteAssets.branding.bobSystemsLogo}
+                  alt="Bob-systems"
+                  width={140}
+                  height={40}
+                  className="h-auto w-[140px]"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -43,62 +61,47 @@ export default function FinnishHomePage() {
         <div className="container">
           <div className="card-grid">
             <article className="info-card">
-              <h3 className="text-xl">Nopea toimitus</h3>
+              <h3 className="text-xl">Perusteellinen tarkkuus</h3>
               <p className="mt-2 text-[#34413c]">
-                Tiukat aikataulut ovat meille arkea. Prosessi on rakennettu
-                selkeille tarjouksille ja luotettaville toimitusajoille.
+                Kaaret ja tarvikkeet valmistetaan alusta asti asiakkaan
+                tarpeiden ja piirustusten mukaan, jotta istuvuus ja toimivuus
+                ovat tarkat.
               </p>
             </article>
             <article className="info-card">
-              <h3 className="text-xl">Laadunvarmistus</h3>
+              <h3 className="text-xl">Seuraa meitä somessa</h3>
               <p className="mt-2 text-[#34413c]">
-                Jokainen osa mitataan ja dokumentoidaan ennen toimitusta, jotta
-                asennus sujuu ilman viivastyksia.
+                Pysy ajan tasalla uusimmista projekteista seuraamalla meitä
+                Instagramissa. Julkaisemme säännöllisesti kuvia verstaalta ja
+                valmistuneista toteutuksista.
               </p>
+              <Link
+                href="https://www.instagram.com/convoy.customs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#34413c] hover:text-[var(--brand-dark)]"
+                aria-label="Seuraa meitä Instagramissa"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4"
+                  fill="currentColor"
+                >
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5Zm8.88 1.5a.87.87 0 1 1 0 1.75.87.87 0 0 1 0-1.75ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" />
+                </svg>
+                Instagram
+              </Link>
             </article>
             <article className="info-card">
-              <h3 className="text-xl">Teollisuudelle rakennettu</h3>
+              <h3 className="text-xl">Huolto ja korjaukset</h3>
               <p className="mt-2 text-[#34413c]">
-                Valmistamme ratkaisuja logistiikkaan, energiaan ja raskaaseen
-                kalustoon, joissa toiminnallisuus on ensisijaista.
+                Teemme myös huollot ja korjaukset erikokoisiin ajoneuvoihin.
+                Testilaitteiston avulla pystymme vianetsintään ja korjauksiin
+                nopeasti.
               </p>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section className="page-section bg-[var(--surface-muted)]">
-        <div className="container grid gap-6 md:grid-cols-3">
-          <article className="rounded-xl bg-[var(--surface)] p-5">
-            <p className="text-sm uppercase tracking-wider text-[#3f4f48]">
-              Vaihe 1
-            </p>
-            <h3 className="mt-1 text-xl">Tarpeen kartoitus</h3>
-            <p className="mt-2 text-[#34413c]">
-              Toimita piirustukset tai konsepti. Arvioimme vaatimukset,
-              toleranssit ja materiaalit ennen tarjousta.
-            </p>
-          </article>
-          <article className="rounded-xl bg-[var(--surface)] p-5">
-            <p className="text-sm uppercase tracking-wider text-[#3f4f48]">
-              Vaihe 2
-            </p>
-            <h3 className="mt-1 text-xl">Valmistus</h3>
-            <p className="mt-2 text-[#34413c]">
-              Tuotanto etenee selkeilla valivaiheilla: leikkaus, hitsaus,
-              viimeistely ja tarkastus.
-            </p>
-          </article>
-          <article className="rounded-xl bg-[var(--surface)] p-5">
-            <p className="text-sm uppercase tracking-wider text-[#3f4f48]">
-              Vaihe 3
-            </p>
-            <h3 className="mt-1 text-xl">Toimitus</h3>
-            <p className="mt-2 text-[#34413c]">
-              Pakkaamme ja merkitsemme osat asennusjarjestyksen mukaan, jotta
-              tyomaalla tulee mahdollisimman vahan viivetta.
-            </p>
-          </article>
         </div>
       </section>
     </main>

@@ -1,4 +1,4 @@
-export default function ContactPage() {
+﻿export default function ContactPage() {
   return (
     <main className="page-section">
       <div className="container grid gap-6 md:grid-cols-[1.05fr_1fr]">
@@ -8,7 +8,7 @@ export default function ContactPage() {
             Har du frågor om våra tjänster eller vill du veta mer om hur vi kan hjälpa dig med ditt projekt? Tveka inte att ta kontakt!
           </p>
           <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
-            <h2 className="text-2xl">Ta Kontakt</h2>
+            <h2 className="text-2xl">Ta kontakt</h2>
             <p className="mt-3 text-[#34413c]">
               E-post: info@convoycustoms.fi
               <br />
@@ -37,7 +37,7 @@ export default function ContactPage() {
                 className="w-full rounded-md border border-[var(--border)] px-3 py-2"
                 type="email"
                 name="email"
-                placeholder="du@foretag.se"
+                placeholder="du@foretag.fi"
               />
             </label>
             <label className="block">
@@ -45,11 +45,11 @@ export default function ContactPage() {
               <textarea
                 className="min-h-32 w-full rounded-md border border-[var(--border)] px-3 py-2"
                 name="message"
-                placeholder="Kort info om ditt projekt och din telefonnummer."
+                placeholder="Kort info om ditt projekt och ditt telefonnummer."
               />
             </label>
             <button type="submit" className="primary-button">
-              Skicka förfragan
+              Skicka förfrågan
             </button>
           </form>
         </section>
@@ -57,3 +57,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

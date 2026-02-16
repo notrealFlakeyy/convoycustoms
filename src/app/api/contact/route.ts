@@ -49,7 +49,7 @@ export async function POST(request: Request) {
 
     const subject =
       locale === "fi"
-        ? `Uusi yhteydenottopyynto: ${name}`
+        ? `Uusi yhteydenottopyyntö: ${name}`
         : `Ny kontaktforfragan: ${name}`;
 
     const text = [

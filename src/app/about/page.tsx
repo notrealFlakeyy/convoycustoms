@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 const projectImages = [
   "/images/branding/IMG_2658.jpeg",
@@ -38,3 +38,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

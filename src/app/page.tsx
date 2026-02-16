@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { siteAssets } from "@/lib/site-assets";
 
@@ -28,16 +28,16 @@ export default function Home() {
             <p className="mt-4 text-[#34413c]">
               Som auktoriserad återförsäljare av Bob-systems tar vi dessutom hand om
               insidan av din servicebil. Vi monterar professionell bilinredning som
-              maximerar din arbetsyta och håller årdning på prylarna. Rita upp din
+              maximerar din arbetsyta och håller ordning på prylarna. Rita upp din
               egna inredning och begär offert via logon nedan{" "}
-              <span aria-hidden="true" className="inline-block text-sm">↓</span>
+              <span aria-hidden="true" className="inline-block text-sm">?</span>
             </p>
             <div className="mt-4">
               <Link
                 href="https://bobsystem.se/?reseller=13024"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Besok Bob-systems"
+                aria-label="Besök Bob-systems"
                 className="inline-flex"
               >
                 <Image
@@ -63,7 +63,7 @@ export default function Home() {
               </p>
             </article>
             <article className="info-card">
-              <h3 className="text-xl">Följ oss gärna på Sociala medier</h3>
+              <h3 className="text-xl">Följ oss gärna på sociala medier</h3>
               <p className="mt-2 text-[#34413c]">
                 Håll dig uppdaterad med våra senaste projekt och inspiration genom att följa oss på Instagram. Vi delar regelbundet bilder från vår verkstad, så att du kan se hur vi förvandlar idéer till verklighet.
               </p>
@@ -72,7 +72,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#34413c] hover:text-[var(--brand-dark)]"
-                aria-label="Folj oss pa Instagram"
+                aria-label="Följ oss på Instagram"
               >
                 <svg
                   aria-hidden="true"
@@ -97,3 +97,4 @@ export default function Home() {
     </main>
   );
 }
+
