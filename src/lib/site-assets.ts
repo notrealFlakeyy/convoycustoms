@@ -1,7 +1,7 @@
 export const siteAssets = {
   branding: {
     logo: "/images/branding/convoy-customs-logo.jpg",
-    bobSystemsLogo: "/images/branding/BOBsystem_logotype.png",
+    bobSystemsLogo: "/images/branding/bob_button.png",
   },
   paths: {
     photos: "/images/photos",
