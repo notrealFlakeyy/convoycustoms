@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+﻿import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
 type ContactPayload = {
@@ -50,15 +50,24 @@ export async function POST(request: Request) {
     const subject =
       locale === "fi"
         ? `Uusi yhteydenottopyyntö: ${name}`
-        : `Ny kontaktforfragan: ${name}`;
+        : `Ny kontaktförfrågan: ${name}`;
 
-    const text = [
-      `Namn: ${name}`,
-      `E-post: ${email}`,
-      "",
-      "Meddelande:",
-      message,
-    ].join("\n");
+    const text =
+      locale === "fi"
+        ? [
+            `Nimi: ${name}`,
+            `Sähköposti: ${email}`,
+            "",
+            "Viesti:",
+            message,
+          ].join("\n")
+        : [
+            `Namn: ${name}`,
+            `E-post: ${email}`,
+            "",
+            "Meddelande:",
+            message,
+          ].join("\n");
 
     await transporter.sendMail({
       from: process.env.SMTP_FROM ?? process.env.SMTP_USER,
@@ -69,7 +78,17 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ ok: true });
-  } catch {
-    return NextResponse.json({ error: "Mail send failed" }, { status: 500 });
+  } catch (error) {
+    console.error("Contact email send failed:", error);
+
+    const detail =
+      process.env.NODE_ENV !== "production" && error instanceof Error
+        ? error.message
+        : undefined;
+
+    return NextResponse.json(
+      { error: "Mail send failed", detail },
+      { status: 500 },
+    );
   }
 }

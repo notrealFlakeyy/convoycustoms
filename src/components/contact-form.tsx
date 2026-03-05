@@ -24,13 +24,16 @@ type ContactFormProps = {
 export default function ContactForm({ text, locale }: ContactFormProps) {
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("idle");
+    setErrorMessage("");
     setIsSending(true);
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const payload = {
       name: String(formData.get("name") ?? "").trim(),
       email: String(formData.get("email") ?? "").trim(),
@@ -46,12 +49,18 @@ export default function ContactForm({ text, locale }: ContactFormProps) {
       });
 
       if (!response.ok) {
-        throw new Error("Request failed");
+        const data = (await response.json().catch(() => null)) as
+          | { error?: string; detail?: string }
+          | null;
+        const messageFromServer = data?.detail || data?.error;
+        throw new Error(messageFromServer || "Request failed");
       }
 
-      event.currentTarget.reset();
+      form.reset();
       setStatus("success");
-    } catch {
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Request failed";
+      setErrorMessage(message);
       setStatus("error");
     } finally {
       setIsSending(false);
@@ -98,7 +107,10 @@ export default function ContactForm({ text, locale }: ContactFormProps) {
           <p className="text-sm text-green-700">{text.success}</p>
         ) : null}
         {status === "error" ? (
-          <p className="text-sm text-red-700">{text.error}</p>
+          <p className="text-sm text-red-700">
+            {text.error}
+            {errorMessage ? ` (${errorMessage})` : ""}
+          </p>
         ) : null}
       </form>
     </section>
