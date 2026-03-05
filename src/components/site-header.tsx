@@ -13,7 +13,11 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container site-header-inner">
-        <Link href={isFinnish ? "/fi" : "/"} className="brand brand-logo" aria-label="Convoy Customs">
+        <Link
+          href={isFinnish ? "/fi" : "/"}
+          className="brand brand-logo"
+          aria-label="Convoy Customs"
+        >
           <Image
             src={siteAssets.branding.logo}
             alt="Convoy Customs logo"
@@ -21,6 +25,7 @@ export default function SiteHeader() {
             width={320}
             height={80}
             priority
+            unoptimized
           />
         </Link>
         <div className="header-right">
